@@ -1,7 +1,7 @@
 import testConfig from './config.test';
 import prodConfig from './config.prod';
 import defaultConfig from './config';
-import { NODE_ENV } from '../enums';
+import { NODE_ENV } from '../utils/enums';
 
 const assignDeep = require('assign-deep');
 

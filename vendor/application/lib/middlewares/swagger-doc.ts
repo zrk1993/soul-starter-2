@@ -51,7 +51,7 @@ export function useSwaggerApi(app: Application, swaggerConfig: ISwaggerOption) {
       swaggerConfig.prefix || '/api',
       koaStatic(pathToSwaggerUi, {
         maxage: 8640000,
-      }),
+      } as any ),
     ),
   );
 }

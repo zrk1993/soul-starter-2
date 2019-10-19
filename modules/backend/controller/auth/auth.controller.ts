@@ -1,13 +1,13 @@
 import { Controller, Get, QuerySchame, Query, Ctx, Post, BodySchame, Body, Description, Tag } from 'application';
 import * as joi from 'joi';
 import * as Koa from 'koa';
-import { SYS_ROLE } from '../../enums';
-import { ResultUtils } from '../../../../utils/result-utils';
-import db from '../../../../utils/db';
-import md5 from '../../../../utils/md5';
-import * as appJwt from '../../../../middleware/app-jwt';
-import Role from '../../../../decorators/role';
-import CurUser from '../../../../decorators/cur-user';
+import { SYS_ROLE } from '@/utils/enums';
+import { ResultUtils } from '@/utils/result-utils';
+import db from '@/utils/db';
+import md5 from '@/utils/md5';
+import * as appJwt from '@/middleware/app-jwt';
+import Role from '@/decorators/role';
+import CurUser from '@/decorators/cur-user';
 
 @Controller('/auth')
 @Description('auth')
