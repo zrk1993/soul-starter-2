@@ -1,0 +1,49 @@
+{
+  "name": "application-starter",
+  "version": "1.0.0",
+  "description": "application TypeScript starter repository",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "ts-clean",
+    "lint": "tslint --fix -p tsconfig.json -c tslint.json"
+  },
+  "dependencies": {
+    "assign-deep": "^1.0.0",
+    "ioredis": "^4.6.2",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.4.0",
+    "koa": "^2.6.2",
+    "koa-logger": "^3.2.0",
+    "koa-session": "^5.10.1",
+    "koa-unless": "^1.0.7",
+    "log4js": "^4.0.1",
+    "moment": "^2.24.0",
+    "mysql": "^2.16.0",
+    "soul-orm": "^1.1.15",
+    "application": "^3.0.1",
+    "sqlstring": "^2.3.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/ioredis": "^4.0.6",
+    "@types/joi": "^14.3.1",
+    "@types/jsonwebtoken": "^8.3.0",
+    "@types/koa": "^2.0.48",
+    "@types/koa-bodyparser": "^4.2.2",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-session": "^5.10.0",
+    "@types/log4js": "^2.3.5",
+    "@types/mysql": "^2.15.5",
+    "@types/node": "^10.12.21",
+    "@types/sqlstring": "^2.2.1",
+    "@types/uuid": "^3.4.4",
+    "koa-bodyparser": "^4.2.1",
+    "prettier": "^1.16.3",
+    "ts-clean": "^1.0.2",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.7.0",
+    "tslint": "5.12.1",
+    "typescript": "^3.3.1"
+  }
+}
