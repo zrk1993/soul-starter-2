@@ -1,3 +1,8 @@
+/**
+ * @Author: kun
+ * @Date: 2019-10
+ */
+
 import * as crypto from 'crypto';
 
 export default (str: string): string => {

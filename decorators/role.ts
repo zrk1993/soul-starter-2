@@ -1,3 +1,8 @@
+/**
+ * @Author: kun
+ * @Date: 2019-10
+ */
+
 import { Use, Description } from '@/common/application';
 import * as Koa from 'koa';
 import { verify } from '../middleware/app-jwt';

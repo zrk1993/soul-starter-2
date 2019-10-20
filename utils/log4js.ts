@@ -1,3 +1,7 @@
+/**
+ * @Author: kun
+ */
+
 import { configure, getLogger } from 'log4js';
 
 const config = {

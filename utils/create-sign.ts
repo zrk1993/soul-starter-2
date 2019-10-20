@@ -1,3 +1,7 @@
+/**
+ * @Author: kun
+ */
+
 import md5 from './md5';
 
 export default function createSign(data: any, key: string): string {

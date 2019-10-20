@@ -1,3 +1,8 @@
+/**
+ * @Author: kun
+ * @Date: 2019-10
+ */
+
 import * as Redis from 'ioredis';
 import getLogger from './log4js';
 
