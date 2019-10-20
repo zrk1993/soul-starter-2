@@ -1,4 +1,4 @@
-import { DBM } from 'dbm';
+import { DBM } from '@/common/dbm';
 import getLogger from './log4js';
 
 const logger = getLogger('db.ts');

@@ -20,7 +20,7 @@ export function reCartesian(dataList: any[], structure: IStructure, results: any
   dataList.forEach(row => {
     const [table, id] = structure.id.split('.');
     const key = row[table][id];
-    if (key === null) return;
+    if (key === null) { return; }
     if (!keyMap[key]) {
       keyMap[key] = [];
       row[table].groups = () => keyMap[key];

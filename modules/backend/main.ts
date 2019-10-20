@@ -2,14 +2,13 @@
  * @Author: kun
  */
 require('module-alias/register');
-import { createApplication } from 'application';
-import * as koaLogger from 'koa-logger';
-import config from './config';
-import * as router from './router';
+import { createApplication } from '@/common/application';
 import { NODE_ENV } from '@/utils/enums';
 import getLogger from '@/utils/log4js';
 import errorHandle from '@/middleware/error-handle';
-
+import * as koaLogger from 'koa-logger';
+import config from './config';
+import * as router from './router';
 
 async function main() {
   const app = await createApplication(__dirname, Object.keys(router).map(k => router[k]), {

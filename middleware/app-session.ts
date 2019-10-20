@@ -1,7 +1,7 @@
 import * as Koa from 'koa';
 import * as session from 'koa-session';
 
-import { redis } from '../utils/redis';
+import { redis } from '@/utils/redis';
 
 const store: session.stores = {
   /**

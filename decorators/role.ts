@@ -1,4 +1,4 @@
-import { Use, Description } from 'application';
+import { Use, Description } from '@/common/application';
 import * as Koa from 'koa';
 import { verify } from '../middleware/app-jwt';
 import db from '../utils/db';

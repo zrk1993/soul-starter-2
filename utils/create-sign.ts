@@ -1,4 +1,4 @@
-import md5 from '../utils/md5';
+import md5 from './md5';
 
 export default function createSign(data: any, key: string): string {
   const keys = Object.keys(data);

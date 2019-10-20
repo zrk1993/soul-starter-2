@@ -1,6 +1,6 @@
-import { Controller, Get, QuerySchame, Query, Ctx, Post, BodySchame, Body, Description, Tag } from 'application';
 import * as joi from 'joi';
 import * as Koa from 'koa';
+import { Controller, Get, QuerySchame, Query, Ctx, Post, BodySchame, Body, Description, Tag } from '@/common/application';
 import { SYS_ROLE } from '@/utils/enums';
 import { ResultUtils } from '@/utils/result-utils';
 import db from '@/utils/db';

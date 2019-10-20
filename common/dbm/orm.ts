@@ -14,7 +14,7 @@ export class Orm {
     pool.on('error', error => {
       this.logger.error('soul-orm: ', error.message);
     });
-    
+
     pool.query('SELECT 1', error => {
       if (error) {
         this.logger.error('soul-orm: ', error.message);

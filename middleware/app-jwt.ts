@@ -3,7 +3,7 @@ import * as Koa from 'koa';
 import * as moment from 'moment';
 import unless = require('koa-unless');
 // import { redis } from '../utils/redis';
-import { ResultUtils } from '../utils/result-utils';
+import { ResultUtils } from '@/utils/result-utils';
 
 const secret = 'hahahahahah' + moment().format('YYYYMMDD');
 
@@ -27,7 +27,7 @@ export const verify = (ctx: Koa.Context): Promise<string | any> => {
         error.name = 'JWTTokenError';
         reject(error);
       } else {
-        resolve(decoded)
+        resolve(decoded);
       }
     });
   });

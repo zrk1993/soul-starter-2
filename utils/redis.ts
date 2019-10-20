@@ -1,5 +1,5 @@
 import * as Redis from 'ioredis';
-import getLogger from '../utils/log4js';
+import getLogger from './log4js';
 
 const logger = getLogger('redis.ts');
 

@@ -1,7 +1,7 @@
 import * as Koa from 'koa';
-import { PARAM_VALIDATIONE_RROR } from 'application';
-import getLogger from '../utils/log4js';
-import { ResultUtils } from '../utils/result-utils';
+import { PARAM_VALIDATIONE_RROR } from '@/common/application';
+import getLogger from '@/utils/log4js';
+import { ResultUtils } from '@/utils/result-utils';
 
 const logger = getLogger('error-handle.ts');
 

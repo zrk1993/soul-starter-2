@@ -8,7 +8,7 @@ export const db = new Orm({
   database: 'application',
 });
 
-(async () => {
+async function main() {
 
   db.reCartesian([], { id: '' });
 
@@ -34,4 +34,6 @@ export const db = new Orm({
   }
   // row query
   const result = await db.query(`SELECT * FROM user U LEFT JOIN user_roles UR ON UR.user_id = U.id WHERE U.type = ?`, ['type']);
-});
+}
+
+main();

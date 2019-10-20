@@ -29,7 +29,7 @@ export class QueryBuilder {
 
     sql += `SELECT ${this.$field.join(', ')} FROM ${this.$table}`;
 
-    if (this.$where) sql += ` WHERE ${this.$where}`;
+    if (this.$where) { sql += ` WHERE ${this.$where}`; }
 
     if (this.$order) {
       sql += ` ORDER BY ${this.$order}`;
@@ -94,7 +94,7 @@ export class QueryBuilder {
     }).join(',');
     let sql = `UPDATE ?? SET ${update}`;
 
-    if (this.$where) sql += ` WHERE ${this.$where}`;
+    if (this.$where) { sql += ` WHERE ${this.$where}`; }
 
     if (this.$limit) {
       sql += ` LIMIT ?`;
@@ -111,7 +111,7 @@ export class QueryBuilder {
 
   public async delete(): Promise<void> {
     let sql = `DELETE FROM ${this.$table}`;
-    if (this.$where) sql += ` WHERE ${this.$where}`;
+    if (this.$where) { sql += ` WHERE ${this.$where}`; }
 
     const inserts = [];
 
@@ -146,8 +146,9 @@ export class QueryBuilder {
       });
     }
 
-    if (this.$where) this.$where += ' AND ';
-    else this.$where = '';
+    if (this.$where) { this.$where += ' AND '; } else {
+      this.$where = '';
+    }
 
     this.$where += sqlstring.format(sql, values);
     return this;
