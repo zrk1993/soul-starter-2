@@ -1,5 +1,6 @@
 /**
  * @Author: kun
+ * 2019-10-25
  */
 require('module-alias/register');
 import { createApplication } from '@/common/application';
