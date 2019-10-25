@@ -4,6 +4,7 @@ import { Controller, Get, QuerySchame, Query, Ctx, Post, BodySchame, Body, Descr
 import { SYS_ROLE } from '@/utils/enums';
 import { ResultUtils } from '@/utils/result-utils';
 import db from '@/utils/db';
+import * as Lock from '@/utils/lock';
 import md5 from '@/utils/md5';
 import * as appJwt from '@/middleware/app-jwt';
 import Role from '@/decorators/role';
@@ -38,6 +39,20 @@ export class Auth {
   async logout(@Ctx() ctx: Koa.Context) {
     ctx.cookies.set('authorization', '');
     return ResultUtils.success();
+  }
+
+  @Get('/lock')
+  @Description('lock')
+  async lock(@Ctx() ctx: Koa.Context) {
+    const lock = await Lock.getLock('a');
+    const a = await db.table('wallet').find();
+    console.log(a.frozen);
+    await new Promise((resolve, reject) => {
+      setTimeout(resolve, 3000* Math.random());
+    });
+    await db.table('wallet').where({ id: a.id }).update({ frozen: a.frozen + 1 });
+    lock.release();
+    return ResultUtils.success('1');
   }
 
   @Get('/info')
