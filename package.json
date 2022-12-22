@@ -15,7 +15,7 @@
     "assign-deep": "^1.0.0",
     "ioredis": "^4.6.2",
     "joi": "^14.3.1",
-    "jsonwebtoken": "^8.4.0",
+    "jsonwebtoken": "^9.0.0",
     "koa": "^2.6.2",
     "koa-logger": "^3.2.0",
     "koa-session": "^5.10.1",
